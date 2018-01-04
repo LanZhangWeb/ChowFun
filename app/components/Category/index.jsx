@@ -29,9 +29,9 @@ class Category extends React.Component {
                             <li className="float-left travel">Travel</li>
                             <li className="float-left ktv">KTV</li>
                             <li className="float-left shopping">Shopping</li>
-                            <li className="float-left lifeservices">Life services</li>
+                            <li className="float-left lifeservices">Life</li>
                             <li className="float-left fitness">Fitness</li>
-                            <li className="float-left hairdressing">Hairdressing</li>
+                            <li className="float-left hairdressing">Hair</li>
                             <li className="float-left nursery">Nursery</li>
                             <li className="float-left fastfood">Fast food</li>
                             <li className="float-left buffet">Buffet</li>
@@ -43,7 +43,7 @@ class Category extends React.Component {
                             <li className="float-left finefood">Fine food</li>
                             <li className="float-left cinema">Cinema</li>
                             <li className="float-left hotel">Hotel</li>
-                            <li className="float-left entertainment">Entertainment</li>
+                            <li className="float-left entertainment">Entertain</li>
                             <li className="float-left takeout">Take out</li>
                             <li className="float-left hotpot">Hot pot</li>
                             <li className="float-left beauty">Beauty</li>
