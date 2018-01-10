@@ -14,17 +14,17 @@ module.exports = {
         filename: "bundle.js"
     },
 
-    resolve:{
-        extensions:['', '.js','.jsx']
+    resolve: {
+        extensions: ['', '.js', '.jsx']
     },
 
     module: {
         loaders: [
-            { test: /\.(js|jsx)$/, exclude: /node_modules/, loader: 'babel' },
-            { test: /\.less$/, exclude: /node_modules/, loader: 'style!css!postcss!less' },
-            { test: /\.css$/, exclude: /node_modules/, loader: 'style!css!postcss' },
-/*            { test:/\.(png|gif|jpg|jpeg|bmp)$/i, loader:'url-loader?limit=5000' },*/
-            { test:/\.(png|woff|woff2|svg|ttf|eot)($|\?)/i, loader:'url-loader?limit=5000'}
+            {test: /\.(js|jsx)$/, exclude: /node_modules/, loader: 'babel'},
+            {test: /\.less$/, exclude: /node_modules/, loader: 'style!css!postcss!less'},
+            {test: /\.css$/, exclude: /node_modules/, loader: 'style!css!postcss'},
+            /*            { test:/\.(png|gif|jpg|jpeg|bmp)$/i, loader:'url-loader?limit=5000' },*/
+            {test: /\.(png|woff|woff2|svg|ttf|eot)($|\?)/i, loader: 'url-loader?limit=5000'}
         ]
     },
 
@@ -53,6 +53,12 @@ module.exports = {
     ],
 
     devServer: {
+        proxy: {
+            '/api': {
+                target: 'http://localhost:3000',
+                secure: false
+            }
+        },
         contentBase: "./public",
         colors: true,
         historyApiFallback: true,
