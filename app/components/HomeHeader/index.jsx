@@ -1,5 +1,7 @@
 import React from 'react';
 import PureRenderMixin from 'react-addons-pure-render-mixin';
+import { Link, hashHistory } from 'react-router';
+import SearchInput from '../SearchInput';
 import './style.less';
 import '../../static/css/common.less';
 
@@ -13,8 +15,10 @@ class HomeHeader extends React.Component {
         return (
             <div id="home-header" className="clear-fix">
                 <div className="home-header-left float-left">
-                    <span>{this.props.cityName}</span>
-                    <i className="icon-angle-down"></i>
+                    <Link to="/city">
+                        <span>{this.props.cityName}</span>
+                        <i className="icon-angle-down"></i>
+                    </Link>
                 </div>
                 <div className="home-header-right float-right">
                     <i className="icon-user"></i>
@@ -22,10 +26,15 @@ class HomeHeader extends React.Component {
                 <div className="home-header-middle">
                     <div className="search-container">
                         <i className="icon-search"></i>
-                        <input type="text" placeholder="Please enter key words." /></div>
+                        <SearchInput value="" enterHandle={this.enterHandle.bind(this)} />
                     </div>
+                </div>
             </div>
         );
+    }
+
+    enterHandle(value) {
+        hashHistory.push('/search/all/' + encodeURIComponent(value));
     }
 }
 
