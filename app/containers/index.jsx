@@ -2,10 +2,10 @@ import React from 'react';
 import PureRenderMixin from 'react-addons-pure-render-mixin';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import * as userInfoActionsFromOtherFile from '../Actions/userinfo';
+import * as userInfoActionsFromOtherFile from '../actions/userinfo';
 
 import localStore from '../util/localStore';
-import { CITYNAME } from '../config/localSotreKey';
+import { CITYNAME } from '../config/localStoreKey';
 
 class App extends React.Component {
     constructor(props, context) {
