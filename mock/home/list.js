@@ -7,7 +7,7 @@ module.exports = {
             subTitle: 'Try our burger',
             price: '18',
             distance: '40m',
-            mumber: '389'
+            number: '389'
         },
         {
             img: 'http://pic.yupoo.com/devlevelup/H1ntIwbM/medish.jpg',
@@ -15,7 +15,7 @@ module.exports = {
             subTitle: '[NorthYork]Buffet',
             price: '98',
             distance: '60m',
-            mumber: '689'
+            number: '689'
         },
         {
             img: 'http://pic.yupoo.com/devlevelup/H1ntF34d/medish.jpg',
@@ -23,7 +23,7 @@ module.exports = {
             subTitle: 'Up to 40% off',
             price: '500',
             distance: '180m',
-            mumber: '106'
+            number: '106'
         },
         {
             img: 'http://pic.yupoo.com/devlevelup/H1ntzf9E/medish.jpg',
@@ -31,7 +31,7 @@ module.exports = {
             subTitle: 'Free trial',
             price: '600',
             distance: '600m',
-            mumber: '58'
+            number: '58'
         },
         {
             img: 'http://pic.yupoo.com/devlevelup/H1ntCstS/medish.jpg',
@@ -39,7 +39,7 @@ module.exports = {
             subTitle: 'Try it for free',
             price: '0',
             distance: '80m',
-            mumber: '1426'
+            number: '1426'
         }
     ]
 };

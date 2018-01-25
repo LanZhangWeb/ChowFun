@@ -27,7 +27,7 @@ class Item extends React.Component {
                         </p>
                         <div className="item-price-container clear-fix">
                             <span className="price float-left">${data.price}</span>
-                            <span className="number float-right">Over {data.mumber} bought</span>
+                            <span className="number float-right">Over {data.number} bought</span>
                         </div>
                     </div>
                 </Link>
