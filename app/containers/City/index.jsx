@@ -42,10 +42,6 @@ class City extends React.Component {
 
         hashHistory.push('/');
     }
-
-    componentDidMount() {
-
-    }
 }
 
 function mapStateToProps(state) {
