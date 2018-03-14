@@ -1,6 +1,3 @@
-/**
- * Created by Gracia on 17/12/1.
- */
 var path = require('path');
 var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
