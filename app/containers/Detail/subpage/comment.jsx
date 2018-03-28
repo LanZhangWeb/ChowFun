@@ -13,7 +13,7 @@ class Comment extends React.Component {
             data: [],
             hasMore: false,
             isLoadingMore: false,
-            page: 0
+            page: 1
         }
     }
     render() {
@@ -54,6 +54,7 @@ class Comment extends React.Component {
         this.resultHandle(result);
 
         this.setState({
+            page: page + 1,
             isLoadingMore: false
         });
     }
@@ -62,11 +63,6 @@ class Comment extends React.Component {
         result.then(res => {
             return res.json()
         }).then(json => {
-            const page = this.state.page;
-            this.setState({
-                page: page + 1
-            });
-
             const hasMore = json.hasMore;
             const data = json.data;
 
