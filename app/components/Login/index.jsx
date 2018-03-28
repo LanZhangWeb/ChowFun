@@ -7,7 +7,7 @@ class LoginComponent extends React.Component {
         super(props, context);
         this.shouldComponentUpdate = PureRenderMixin.shouldComponentUpdate.bind(this);
         this.state = {
-            phone: ''
+            username: ''
         }
     }
 
@@ -35,12 +35,12 @@ class LoginComponent extends React.Component {
 
     changeHandle(e) {
         this.setState({
-            phone: e.target.value
+            username: e.target.value
         });
     }
 
     clickHandle() {
-        const username = this.state.phone;
+        const username = this.state.username;
         const loginHandle = this.props.loginHandle;
         loginHandle(username);
     }
