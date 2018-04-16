@@ -5,7 +5,7 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
     entry: {
-        app: path.resolve(__dirname, 'app/index.jsx'),
+        app: path.resolve(__dirname, 'app/index.js'),
 
         vendor: [
             'react',
@@ -33,7 +33,7 @@ module.exports = {
             { test: /\.(js|jsx)$/, exclude: /node_modules/, loader: 'babel' },
             { test: /\.less$/, exclude: /node_modules/, loader: ExtractTextPlugin.extract('style', 'css!postcss!less') },
             { test: /\.css$/, exclude: /node_modules/, loader: ExtractTextPlugin.extract('style', 'css!postcss') },
-            { test:/\.(png|gif|jpg|jpeg|bmp)$/i, loader:'url-loader?limit=5000&name=img/[name].[chunkhash:8].[ext]' },
+            /*{ test:/\.(png|gif|jpg|jpeg|bmp)$/i, loader:'url-loader?limit=5000&name=img/[name].[chunkhash:8].[ext]' },*/
             { test:/\.(png|woff|woff2|svg|ttf|eot)($|\?)/i, loader:'url-loader?limit=5000&name=fonts/[name].[chunkhash:8].[ext]'}
         ]
     },
@@ -58,7 +58,6 @@ module.exports = {
 
         new webpack.optimize.UglifyJsPlugin({
             compress: {
-                //supresses warnings, usually from module minification
                 warnings: false
             }
         }),
