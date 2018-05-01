@@ -25,6 +25,10 @@ class Buy extends React.Component {
         );
     }
 
+    componentDidMount() {
+        this.checkStoreState();
+    }
+
     checkStoreState() {
         const id = this.props.id;
         const store = this.props.store;
@@ -62,7 +66,7 @@ class Buy extends React.Component {
     }
 
     storeHandle() {
-        const loginFlag = this.loginCheck()
+        const loginFlag = this.loginCheck();
         if (!loginFlag) {
             return;
         }
@@ -70,9 +74,9 @@ class Buy extends React.Component {
         const id = this.props.id;
         const storeActions = this.props.storeActions;
         if (this.state.isStore) {
-            storeActions.rm({id: id})
+            storeActions.rm({id: id});
         } else {
-            storeActions.add({id: id})
+            storeActions.add({id: id});
         }
 
         this.setState({
