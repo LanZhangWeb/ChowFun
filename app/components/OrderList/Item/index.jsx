@@ -54,6 +54,7 @@ class Item extends React.Component {
             commentState: this.props.data.commentState
         });
     }
+
     showComment() {
         this.setState({
             commentState: 1
@@ -71,6 +72,7 @@ class Item extends React.Component {
 
         submitComment(id, value, this.commentOk.bind(this));
     }
+
     commentOk() {
         this.setState({
             commentState: 2
